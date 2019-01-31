@@ -1,0 +1,115 @@
+@import "variables";
+
+.item-detail {
+  display: grid;
+  padding-bottom: 2rem;
+  grid-template-columns: 65% auto;
+  grid-template-rows: auto 1fr;
+  grid-row-gap: 5rem;
+  grid-template-areas:
+    "image info"
+    "description .";
+  overflow: hidden;
+}
+
+.item-detail__image,
+.item-detail__info {
+  margin-top: 2rem;
+}
+
+.item-detail__image {
+  width: 50%;
+  grid-area: image;
+  justify-self: center;
+  align-self: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+.item-detail__info {
+  grid-area: info;
+
+  p {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    padding: 0;
+    margin: 2rem;
+    margin-left: 0;
+    font-size: 2.9rem;
+    font-weight: lighter;
+  }
+
+  button {
+    color: white;
+    background-color: $blue;
+    border: none;
+    width: 90%;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 2rem;
+  }
+}
+
+.item-detail__description {
+  grid-area: description;
+
+  h3 {
+    padding: 0;
+    margin: 0;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    font-size: 1.75rem;
+  }
+
+  p {
+    font-size: 1rem;
+    padding-left: 2rem;
+    color: $gray;
+  }
+}
+
+@media (max-width: 40rem) {
+  .item-detail {
+    grid-template-columns: 32% auto;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "image image image "
+      "info info info"
+      "description description description";
+  }
+
+  .item-detail__info {
+    margin: 0 1rem;
+  }
+
+  .item-detail__description {
+    margin: 0 1rem;
+
+    p, h3 {
+      margin: 0;
+      padding: 0;
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+    }
+  }
+
+}
+
+// @media (max-width: 26rem) {
+//   .item-detail {
+//     grid-template-areas:
+//       "image info"
+//       "description description";
+//   }
+// }
