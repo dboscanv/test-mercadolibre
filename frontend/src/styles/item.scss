@@ -37,6 +37,7 @@
     justify-self: end;
     padding-top: 2rem;
     min-width: 7.5rem;
+    padding-right: 20px;
   }
 
 }
@@ -71,7 +72,7 @@
   }
 }
 
-@media (max-width: 26rem) {
+@media (max-width: 40rem) {
   .item__general {
     max-width: auto;
   }
