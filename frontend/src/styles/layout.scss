@@ -4,7 +4,7 @@
 .container {
   display: grid;
   grid-template-rows: 3rem auto;
-  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-template-columns: 1fr 5fr 1fr;
   grid-template-areas:
     "header header header"
     ". content .";
